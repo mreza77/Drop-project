@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Image, StatusBar, Text } from 'react-native';
+import { Styles } from '../../Style/GlobalStyle';
+import Button from '../../Components/Button';
 
 class Firstpg extends Component {
   constructor(props) {
@@ -10,8 +12,31 @@ class Firstpg extends Component {
 
   render() {
     return (
-      <View>
-        <Text> Firstpg </Text>
+      <View style={Styles.body}>
+        <StatusBar hidden />
+        <View style={Styles.ContainerImage}>
+          <Image
+            source={require("../../Assets/Pngs/imagemarketing.png")}
+            style={Styles.ImageFirstpg}
+          ></Image>
+          <Text style={Styles.Text}>ABDULLAH MARKETING</Text>
+        </View>
+        <View style={Styles.ContainerButton}>
+          <Button
+            Text={"Log In"}
+            onpress={this.props.navigation.navigate}
+            screen={"Login"}
+            color={"#699CDB"}
+            textcolor={"#fff"}
+          ></Button>
+          <Button
+            Text={"Register"}
+            onpress={this.props.navigation.navigate}
+            screen={"Register"}
+            color={"#E3ECFE"}
+            textcolor={"#84ACE4"}
+          ></Button>
+        </View>
       </View>
     );
   }
