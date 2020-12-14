@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, StatusBar } from 'react-native';
 import { Styles } from '../../Style/GlobalStyle';
 import LottieView from 'lottie-react-native';
 
@@ -19,6 +19,7 @@ class Splash extends Component {
   render() {
     return (
       <View style={Styles.body}>
+        <StatusBar hidden />
         <View style={Styles.ContainerLottie}>
           <LottieView
             style={Styles.SplashLottie}
