@@ -11,7 +11,7 @@ class Home extends Component {
   render() {
     return (
       <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
-        <Text style={{fontSize:20}}> Home </Text>
+        <Text style={{fontSize:20}}> You Are Logged in </Text>
       </View>
     );
   }
