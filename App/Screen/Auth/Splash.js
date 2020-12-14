@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import {Styles} from '../../Style/GlobalStyle';
+import { Styles } from '../../Style/GlobalStyle';
+import LottieView from 'lottie-react-native';
 
 class Splash extends Component {
   constructor(props) {
@@ -9,10 +10,23 @@ class Splash extends Component {
     };
   }
 
+  async componentDidMount() {
+    setTimeout(() => {
+      this.props.navigation.navigate("Firstpg")
+    }, 3000)
+  }
+
   render() {
     return (
       <View style={Styles.body}>
-        <Text> Splash </Text>
+        <View style={Styles.ContainerLottie}>
+          <LottieView
+            style={Styles.SplashLottie}
+            source={require("../../Assets/LottieFiles/logo.json")}
+            loop
+            autoPlay
+          />
+        </View>
       </View>
     );
   }
