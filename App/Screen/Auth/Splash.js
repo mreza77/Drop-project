@@ -13,13 +13,13 @@ class Splash extends Component {
   async componentDidMount() {
     setTimeout(() => {
       this.props.navigation.navigate("Firstpg")
-    }, 3000)
+    }, 3000)    
   }
 
   render() {
     return (
       <View style={Styles.body}>
-        <StatusBar hidden />
+       <StatusBar backgroundColor={"#fff"} barStyle={"dark-content"} />
         <View style={Styles.ContainerLottie}>
           <LottieView
             style={Styles.SplashLottie}

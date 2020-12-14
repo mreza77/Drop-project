@@ -6,6 +6,7 @@ import Splash from './App/Screen/Auth/Splash';
 import Firstpg from './App/Screen/Auth/Firstpg';
 import Login from './App/Screen/Auth/Login';
 import Register from './App/Screen/Auth/Register';
+import Home from './App/Screen/Home/Home';
 
 
 const SplashStack = createStackNavigator(
@@ -30,10 +31,21 @@ const AuthStack = createStackNavigator(
   }
 )
 
+const HomeStack = createStackNavigator(
+  {
+    Home
+  },
+  {
+    initialRouteName: "Home",
+    headerMode: "none"
+  }
+)
+
 const SwitchStack = createSwitchNavigator(
   {
     SplashStack,
-    AuthStack
+    AuthStack,
+    HomeStack
   },
   {
     initialRouteName: "SplashStack"

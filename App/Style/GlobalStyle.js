@@ -39,6 +39,7 @@ export const Styles = StyleSheet.create({
         borderTopLeftRadius:wp(6),
         borderTopRightRadius:wp(6),
         elevation:wp(1),
+        flex:1
     },
     LogoLogin: {
         width: wp(60),
@@ -48,6 +49,7 @@ export const Styles = StyleSheet.create({
     ContainerLogo:{
         alignItems: "center",
         justifyContent: "center",
+    
     },
     TextLogin:{
         fontSize:wp(5),
@@ -88,7 +90,7 @@ export const Styles = StyleSheet.create({
     },
     FormButton:{
         width: wp(80),
-        height: hp(7.7),
+        height: hp(6.5),
         borderRadius: wp(3),
         elevation: wp(1),
         justifyContent: "center",
@@ -134,3 +136,4 @@ export const Styles = StyleSheet.create({
     }
 
 })
+

@@ -13,7 +13,7 @@ class Firstpg extends Component {
   render() {
     return (
       <View style={Styles.body}>
-        <StatusBar hidden />
+        <StatusBar backgroundColor={"#fff"} barStyle={"dark-content"} />
         <View style={Styles.ContainerImage}>
           <Image
             source={require("../../Assets/Pngs/imagemarketing.png")}
