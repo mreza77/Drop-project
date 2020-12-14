@@ -24,15 +24,14 @@ class Login extends Component {
 
   render() {
     return (
-
-      <View style={Styles.body}>
-        <View style={Styles.ContainerLogo}>
-          <Image
-            source={require("../../Assets/Pngs/logo.png")}
-            style={Styles.LogoLogin}
-          ></Image>
-        </View>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={Styles.body}>
+          <View style={Styles.ContainerLogo}>
+            <Image
+              source={require("../../Assets/Pngs/logo.png")}
+              style={Styles.LogoLogin}
+            ></Image>
+          </View>
           <View style={Styles.Loginbody}>
             <Text style={Styles.TextLogin}>Welcome</Text>
             <Formik
@@ -102,11 +101,8 @@ class Login extends Component {
               </TouchableOpacity>
             </View>
           </View>
-        </ScrollView>
-      </View>
-
-
-
+        </View>
+      </ScrollView>
     );
   }
 }
