@@ -2,10 +2,10 @@ import React from 'react';
 import { View, TextInput } from 'react-native';
 import { useFormikContext } from "formik";
 import { Styles } from '../../Style/GlobalStyle';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FormAlert from './FormAlert';
 
-const FormField = ({ name, ...otherprops }) => {
+const FormField = ({ name, icon, ...otherprops }) => {
 
     const { handleChange, setFieldTouched, touched, errors } = useFormikContext();
 
@@ -13,7 +13,7 @@ const FormField = ({ name, ...otherprops }) => {
         <View>
             <View style={Styles.TextInputMain}>
                 <View style={Styles.ContainerTextInput}>
-                    <FontAwesome5 name="phone-alt" style={Styles.TextInputIcon} ></FontAwesome5>
+                    <MaterialIcons name={icon} style={Styles.TextInputIcon} ></MaterialIcons>
                     <TextInput
                         style={Styles.TextInput}
                         {...otherprops}
