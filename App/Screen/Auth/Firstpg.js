@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Image, StatusBar, Text } from 'react-native';
 import { Styles } from '../../Style/GlobalStyle';
-import Button from '../../Components/Button';
+import Button from '../../Components/CustomButton/Button';
 
 class Firstpg extends Component {
   constructor(props) {
