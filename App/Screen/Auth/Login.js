@@ -33,22 +33,8 @@ class Login extends Component {
       })
         .then(response => {
           this.setState({ visibleLoading: false }, () => {
-            console.log(response.data)
-            if (response.data) {
-              if (response.data.token) {
-                console.log(response.data.token)
-                this.props.navigation.navigate("Home")
-              } else {
-                this.setState({
-                  visiblealert: true,
-                  Alert: response.data.error
-                })
-              }
-            } else {
-              this.setState({
-                visiblealert: true,
-                Alert: "Problem in connection process, try again"
-              })
+            if (response.data.token) {
+              this.props.navigation.navigate("Home")
             }
           })
         })
@@ -57,7 +43,7 @@ class Login extends Component {
             setTimeout(() => {
               this.setState({
                 visiblealert: true,
-                Alert: "Internet connection error ..."
+                Alert: error.response.data.error
               })
             }, 1000)
           })
@@ -67,7 +53,7 @@ class Login extends Component {
 
 
   render() {
-    console.log(Global.baseUrl)
+
     return (
 
 

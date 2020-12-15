@@ -35,22 +35,8 @@ class Register extends Component {
       })
         .then(response => {
           this.setState({ visibleLoading: false }, () => {
-            console.log(response.data)
-            if (response.data) {
-              if (response.data.token) {
-                console.log(response.data.token)
-                this.props.navigation.navigate("Home")
-              } else {
-                this.setState({
-                  visiblealert: true,
-                  Alert: response.data.error
-                })
-              }
-            } else {
-              this.setState({
-                visiblealert: true,
-                Alert: "Problem in connection process, try again"
-              })
+            if (response.data.token) {
+              this.props.navigation.navigate("Home")
             }
           })
         })
@@ -59,7 +45,7 @@ class Register extends Component {
             setTimeout(() => {
               this.setState({
                 visiblealert: true,
-                Alert: "Internet connection error ..."
+                Alert: error.response.data.error
               })
             }, 1000)
           })
