@@ -1,12 +1,8 @@
 # Drop-project -first challenge
 
-
-
-
-
 #####    this is experiment english project for React-native android 
 
-###### first install the app on your device and enjoy it :)
+###### first before install the app on your device you should set enghlish your language device :)
 
 ## part of abdullah app :
 1. splash screen
